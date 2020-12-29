@@ -1,0 +1,167 @@
+body{
+    background-color: #1f2335;
+    color: white;
+    text-align: center;
+}
+.card{
+    border: none;
+    background-color: #1f2335;
+}
+
+
+.abt-icn{
+    color: #ff4a57;
+}
+
+.section-content{
+    padding-top: 30px;
+    text-align: left;
+}
+
+.navbar, .navbar-brand{
+    font-size: x-large;
+}
+.nav-item{
+   padding-left: 20px;  
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ff4a57;
+}
+
+.navbar-light .navbar-brand:hover {
+ color:white;
+}
+.sub-head{
+    color: #ff4a57;
+}
+.section-heading{
+    font-weight: bolder;
+    text-shadow: 0.5px 0.5px #ff4a57;
+}
+.skill-list{
+    font-size: larger;
+    color: white;
+    display: inline;
+}
+
+.btn{
+    color: white;
+    background-color: transparent;
+    border: 1px solid #ff4a57;
+    border-radius: 20px;
+}
+
+.btn:hover{
+    color: white;
+    font-weight: bolder;
+    box-shadow: none;
+}
+
+
+.navbar-light .navbar-brand {
+    color: white;
+    font-weight: bolder;
+}
+#b-sub:hover,#b-sub1:hover,#b-sub2:hover, #b-sub3:hover, #b-sub4:hover, #b-sub5:hover{
+    background-color: #ff4a57;
+    color: white;
+}
+
+.navbar-light .navbar-toggler {
+    color: white;
+    border-color: white;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.bar-icon{
+    color: white;
+}
+.collapse{
+    justify-content: flex-end;
+}
+#nv-bar{
+    background-color: rgb(31, 35, 53, 0.9);
+}
+.e-style, .e-style:hover{
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+}
+#home{
+    background-image: url(profile-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.presentation{
+    background-color: rgb(31, 35, 53, 0.7);
+    height: 500px;
+    color: white;
+    padding-top: 150px;
+}
+
+.typewrite, .typewrite:hover {
+    
+    text-decoration: none;
+    color: white;
+}
+.social-icon{
+    padding-top: 30px;
+}
+.social-icon a{
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    margin-right: 10px; 
+}
+.social-icon a:hover, .cpy-rgt:hover{
+    color: #ff4a57;
+}
+.cpy-rgt{
+    text-decoration: none;
+    padding-left: 20px; 
+    font-size: 20px;
+    color: white;
+}
+.section-two{
+    padding-top: 10vh;
+}
+/* Responsive */
+@media only screen and  (min-width: 320px) { 
+    .section-one, .section-two{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+ }
+@media only screen and  (min-width: 576px) { 
+    .section-one, .section-two{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+ }
+@media only screen and  (min-width: 768px) { 
+    .section-one, .section-two{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    
+ }
+@media only screen and  (min-width: 992px) { 
+    .section-one, .section-two{
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+ }
+@media only screen and  (min-width: 1120px) { 
+    .section-one, .section-two{
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+ }

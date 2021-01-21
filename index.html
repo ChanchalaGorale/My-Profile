@@ -4,24 +4,91 @@
         <!--Required meta tags-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <!--Title and logo-->
         <title>Profile Template</title>
         <link rel="icon" href="./logo.png">
 
         <!--Bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
         <!--Fontawesome-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
         <!--CSS-->
         <link rel="stylesheet" href="./style.css">
+
         <!--script-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+        
+         <!--typewriter-->
+        <script>
+             
+            var TxtType = function(el, toRotate, period) {
+                    this.toRotate = toRotate;
+                    this.el = el;
+                    this.loopNum = 0;
+                    this.period = parseInt(period, 10) || 2000;
+                    this.txt = '';
+                    this.tick();
+                    this.isDeleting = false;
+                };
+
+                TxtType.prototype.tick = function() {
+                    var i = this.loopNum % this.toRotate.length;
+                    var fullTxt = this.toRotate[i];
+
+                    if (this.isDeleting) {
+                    this.txt = fullTxt.substring(0, this.txt.length - 1);
+                    } else {
+                    this.txt = fullTxt.substring(0, this.txt.length + 1);
+                    }
+
+                    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+                    var that = this;
+                    var delta = 200 - Math.random() * 100;
+
+                    if (this.isDeleting) { delta /= 2; }
+
+                    if (!this.isDeleting && this.txt === fullTxt) {
+                    delta = this.period;
+                    this.isDeleting = true;
+                    } else if (this.isDeleting && this.txt === '') {
+                    this.isDeleting = false;
+                    this.loopNum++;
+                    delta = 500;
+                    }
+
+                    setTimeout(function() {
+                    that.tick();
+                    }, delta);
+                };
+
+                window.onload = function() {
+                    var elements = document.getElementsByClassName('typewrite');
+                    for (var i=0; i<elements.length; i++) {
+                        var toRotate = elements[i].getAttribute('data-type');
+                        var period = elements[i].getAttribute('data-period');
+                        if (toRotate) {
+                        new TxtType(elements[i], JSON.parse(toRotate), period);
+                        }
+                    }
+                    // INJECT CSS
+                    var css = document.createElement("style");
+                    css.type = "text/css";
+                    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+                    document.body.appendChild(css);
+                };
+        </script>
+
+         <!--filter-->
         <script src="./script.js"></script>
-
-       
-
     </head>
     <body>
+    <!--Menubar-->
         <header class="section-one fixed-top" id="nv-bar">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
@@ -55,6 +122,8 @@
               </nav>
 
         </header>
+
+        <!--banner-->
         <section id="home">
             <div class="presentation" >
                 <div class="section-one">
@@ -76,6 +145,8 @@
             </div>
             
         </section>
+
+        <!--Resume-->
         <section class="section-two"  id="resume">
             <h1 class="section-heading">My Resume</h1>
             
@@ -149,6 +220,8 @@
                 <button type="button" class="btn"  id="b-sub5">Download my Resume <span><i class="fas fa-arrow-alt-circle-down"></i></span></button>
             </a>
         </section>
+
+        <!--Portfolio-->
         <section class="section-two"  id="portfolio">
             <h1 class="section-heading">Portfolio</h1>
             <div class="section-content">
@@ -187,6 +260,7 @@
             </div>
         </section>
         
+        <!--Blog-->
         <section class="section-two"  id="blog">
             <h1 class="section-heading">Blog</h1>
             <div class="row row-cols-1 row-cols-md-3 g-4" style="padding-top: 30px;">
@@ -222,6 +296,8 @@
                 </div>
               </div>
         </section>
+
+        <!--About me-->
         <section class="section-two" id="about">
             <h1 class="section-heading">About Me</h1>
             <div class="card-group">
@@ -247,6 +323,8 @@
                 </div>
               </div>
         </section>
+
+        <!--Contact me-->
         <section class="section-two"  id="contact" style="margin-bottom: 80px;">
             <h1 class="section-heading">Contact Me</h1>
             <div class="section-content">
@@ -283,7 +361,7 @@
             
         </section>
 
-        
+        <!--Footer-->
         <footer class="section-one fixed-bottom copy"   >
             
                 <p>
@@ -293,70 +371,7 @@
                 
            
         </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        
-       
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-        
-        <script>
-             
-            var TxtType = function(el, toRotate, period) {
-                    this.toRotate = toRotate;
-                    this.el = el;
-                    this.loopNum = 0;
-                    this.period = parseInt(period, 10) || 2000;
-                    this.txt = '';
-                    this.tick();
-                    this.isDeleting = false;
-                };
 
-                TxtType.prototype.tick = function() {
-                    var i = this.loopNum % this.toRotate.length;
-                    var fullTxt = this.toRotate[i];
-
-                    if (this.isDeleting) {
-                    this.txt = fullTxt.substring(0, this.txt.length - 1);
-                    } else {
-                    this.txt = fullTxt.substring(0, this.txt.length + 1);
-                    }
-
-                    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-                    var that = this;
-                    var delta = 200 - Math.random() * 100;
-
-                    if (this.isDeleting) { delta /= 2; }
-
-                    if (!this.isDeleting && this.txt === fullTxt) {
-                    delta = this.period;
-                    this.isDeleting = true;
-                    } else if (this.isDeleting && this.txt === '') {
-                    this.isDeleting = false;
-                    this.loopNum++;
-                    delta = 500;
-                    }
-
-                    setTimeout(function() {
-                    that.tick();
-                    }, delta);
-                };
-
-                window.onload = function() {
-                    var elements = document.getElementsByClassName('typewrite');
-                    for (var i=0; i<elements.length; i++) {
-                        var toRotate = elements[i].getAttribute('data-type');
-                        var period = elements[i].getAttribute('data-period');
-                        if (toRotate) {
-                        new TxtType(elements[i], JSON.parse(toRotate), period);
-                        }
-                    }
-                    // INJECT CSS
-                    var css = document.createElement("style");
-                    css.type = "text/css";
-                    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-                    document.body.appendChild(css);
-                };
-        </script>
     </body>
+    
 </html>

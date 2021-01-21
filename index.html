@@ -14,6 +14,12 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         <!--CSS-->
         <link rel="stylesheet" href="./style.css">
+        <!--script-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./script.js"></script>
+
+       
+
     </head>
     <body>
         <header class="section-one fixed-top" id="nv-bar">
@@ -63,8 +69,8 @@
                                 </h1>
 
                                 <div class="social-icon">
-                                    <a href="https://www.linkedin.com/in/chanchala-g-2b040411a/"><span><i class="fab fa-linkedin"></i></span></a>
-                                    <a href="https://github.com/ChanchalaGorale"><span><i class="fab fa-github-square"></i></span></a>
+                                    <a href="https://www.linkedin.com/"><span><i class="fab fa-linkedin"></i></span></a>
+                                    <a href="https://github.com/"><span><i class="fab fa-github-square"></i></span></a>
                                 </div>
                 </div>
             </div>
@@ -149,21 +155,31 @@
                 <div class="row" style="text-align: center;">
                     <div class="col-sm-12 " >
                         <ul style="list-style: none;">
-                            <li class="skill-list active" data-filter="*"><button type="button" class="btn" id="b-sub1" >All</button></li>
-                            <li class="skill-list" data-filter=".fullstack"><button type="button" class="btn" id="b-sub2">Fullstack</button></li>
-                            <li class="skill-list" data-filter=".frontend"><button type="button" class="btn" id="b-sub3">Frontend</button></li>
-                            <li class="skill-list" data-filter=".design"><button type="button" class="btn" id="b-sub4">UX Design</button></li>
+                            <li class="skill-list" >
+                              <button type="button" class="btn" id="b-sub1" >All</button>
+                            </li>
+                            <li class="skill-list" >
+                              <button type="button" class="btn" id="b-sub2">Fullstack</button>
+                            </li>
+                            <li class="skill-list" >
+                              <button type="button" class="btn" id="b-sub3">Frontend</button>
+                            </li>
+                            <li class="skill-list" >
+                              <button type="button" class="btn" id="b-sub4">UX Design</button>
+                            </li>
                         </ul>   
                     </div>
-                    <div class="col-sm-12" >
-                        <div class="row">
-                            <a href="./profile-bg.jpg" class="col-md-4 col-sm-4 col-xs-6 fullstack"><img src="./profile-bg.jpg" width="100%" alt="Fullstack"></a>
-                            <a href="./profile-bg.jpg" class="col-md-4 col-sm-4 col-xs-6 fullstack"><img src="./profile-bg.jpg" width="100%"  alt="Fullstack"></a>
-                            <a href="./profile-bg.jpg" class="col-md-4 col-sm-4 col-xs-6 frontend"><img src="./profile-bg.jpg" width="100%"  alt="frontend"></a>
-                            <a href="./profile-bg.jpg" class="col-md-4 col-sm-4 col-xs-6 frontend"><img src="./profile-bg.jpg" width="100%"  alt="frontend"></a>
-                            <a href="./profile-bg.jpg" class="col-md-4 col-sm-4 col-xs-6 design"><img src="./profile-bg.jpg" width="100%"  alt="design"></a>
-                            <a href="./profile-bg.jpg" class="col-md-4 col-sm-4 col-xs-6 design"><img src="./profile-bg.jpg" width="100%"  alt="design"></a>
+                    <div class="col-lg-12 col-sm-6 mx-auto">
+                        <div class="row" >
+                            <a href="./profile-bg.jpg" class="col-4 col-sm-4 col-xs-6" id="fullstack" ><img src="./profile-bg.jpg" width="100%" alt="Fullstack"></a>
+                            <a href="./profile-bg.jpg" class="col-4 store-item col-sm-4 col-xs-6" id="fullstack"><img src="./profile-bg.jpg" width="100%"  alt="Fullstack"></a>
+                         
+                            <a href="./profile-bg.jpg" class="col-4 col-sm-4 col-xs-6" id="frontend"><img src="./profile-bg.jpg" width="100%"  alt="frontend"></a>
+                            <a href="./profile-bg.jpg" class="col-4 col-sm-4 col-xs-6" id="frontend"><img src="./profile-bg.jpg" width="100%"  alt="frontend"></a>
 
+                            <a href="./profile-bg.jpg" class="col-4 col-sm-4 col-xs-6" id="design"><img src="./profile-bg.jpg" width="100%"  alt="design"></a>
+                            <a href="./profile-bg.jpg" class="col-4 col-sm-4 col-xs-6" id="design"><img src="./profile-bg.jpg" width="100%"  alt="design"></a>
+                            
                         </div>
                          
                     </div>
@@ -266,18 +282,23 @@
             
             
         </section>
-        <footer class="section-one fixed-bottom"  >
-            <div class="">
+
+        
+        <footer class="section-one fixed-bottom copy"   >
+            
                 <p>
                     Copyright © 2020 All Rights Reserved by YourName 
-                    <a href=""class="cpy-rgt" data-bs-toggle="tooltip" data-bs-placement="top" title="Back to top"><span><i class="fas fa-arrow-alt-circle-up"></i></span></a>
+                    <a href="" class="cpy-rgt" data-bs-toggle="tooltip" data-bs-placement="top" title="Back to top"><span><i class="fas fa-arrow-alt-circle-up"></i></span></a>
                 </p>
                 
-            </div>
+           
         </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         
+       
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+        
         <script>
              
             var TxtType = function(el, toRotate, period) {
